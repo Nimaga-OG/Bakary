@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Bakary Nimaga, développeur web basé à Bamako, spécialisé en applications artisanales et e-learning." />
+  <title>Bakary Nimaga | Développeur Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page-loader" class="loader-overlay">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Bakary Nimaga</a>
+      <nav class="nav" id="nav-menu">
+        <a href="#home" class="nav-link">Accueil</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Activer le mode sombre">🌙</button>
+        <button class="icon-btn nav-toggle" id="mobile-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="hero-label">Bonjour, je suis</p>
+          <h1>Bakary Nimaga</h1>
+          <p class="hero-title">Développeur Web Full Stack</p>
+          <p class="hero-text">Je crée des sites et applications web modernes pour valoriser les produits artisanaux et l'éducation digitale.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn-secondary">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-avatar reveal">
+          <div class="avatar-frame">
+            <img src="images/profile1.jpg" alt="Photo de profil de Bakary Nimaga" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section-head reveal">
+        <span class="section-tag">À propos</span>
+        <h2>Une approche claire et performante</h2>
+        <p>Je transforme les idées en interfaces intuitives grâce à des technologies modernes et un code maintenable.</p>
+      </div>
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p>Basé à Bamako, Mali, je conçois des expériences digitales performantes et accessibles pour les commerçants, les artisans et les formations en ligne.</p>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Angular</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div class="skills-card reveal">
+          <div class="skill-item">
+            <span class="skill-label">HTML</span>
+            <div class="skill-bar"><span style="width: 95%"></span></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-label">CSS</span>
+            <div class="skill-bar"><span style="width: 92%"></span></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-label">JavaScript</span>
+            <div class="skill-bar"><span style="width: 88%"></span></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-label">Angular</span>
+            <div class="skill-bar"><span style="width: 82%"></span></div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-label">Node.js</span>
+            <div class="skill-bar"><span style="width: 80%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container section-head reveal">
+        <span class="section-tag">Projets</span>
+        <h2>Travaux récents</h2>
+        <p>Des applications web conçues pour améliorer l'expérience utilisateur et offrir des performances solides.</p>
+      </div>
+      <div class="container projects-grid">
+        <article class="project-card reveal">
+          <div class="project-cover project-1">
+            <img src="images/project-1.svg" alt="Application artisanale" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Plateforme artisanale</h3>
+            <p>Application pour la vente et la promotion de produits artisanaux, optimisée pour une expérience d'achat fluide.</p>
+            <a href="#contact" class="btn btn-tertiary">Voir</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-cover project-2">
+            <img src="images/project-2.svg" alt="Gestion de boutique" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Gestion de boutique</h3>
+            <p>Solution de gestion de boutique pour suivre les stocks, les commandes et les clients au quotidien.</p>
+            <a href="#contact" class="btn btn-tertiary">Voir</a>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-cover project-3">
+            <img src="images/project-3.svg" alt="Site de cours hybrides" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <h3>Site de cours hybrides</h3>
+            <p>Site web dédié aux cours en ligne et en présentiel, avec espace de réservation et informations pédagogiques.</p>
+            <a href="#contact" class="btn btn-tertiary">Voir</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container section-head reveal">
+        <span class="section-tag">Contact</span>
+        <h2>Parlons de votre projet</h2>
+        <p>Envoyez-moi un message pour collaborer sur votre prochaine réalisation digitale.</p>
+      </div>
+      <div class="container contact-grid">
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="from_name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="reply_to" placeholder="Votre email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+          </div>
+          <input type="hidden" name="subject" value="Nouveau message depuis le portfolio" />
+          <input type="hidden" name="to_name" value="Bakary" />
+          <input type="hidden" id="from_email" name="from_email" />
+          <input type="hidden" id="user_name" name="user_name" />
+          <input type="hidden" id="user_email" name="user_email" />
+          <input type="hidden" id="user_message" name="user_message" />
+          <input type="hidden" id="sender_email" name="sender_email" />
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p class="form-feedback" id="form-feedback"></p>
+        </form>
+        <div class="contact-info reveal">
+          <div class="info-card">
+            <h3>Restez connecté</h3>
+            <p>Disponible pour des missions freelance et des collaborations à distance.</p>
+            <ul>
+              <li>Bamako, Mali</li>
+              <li>bakarynimaga988@gmail.com</li>
+              <li>+223 76 74 14 96</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid reveal">
+      <p>© 2026 Bakary Nimaga. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
