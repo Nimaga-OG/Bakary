@@ -17,11 +17,9 @@ const loader = document.getElementById('page-loader');
 
 // Sélection aléatoire de l'image de profil
 const profileImage = document.querySelector('.avatar-frame img');
-const profileImages = ['images/profile.svg', 'images/profile2.jpg'];
-if (profileImage) {
-  const randomImage = profileImages[Math.floor(Math.random() * profileImages.length)];
-  profileImage.src = randomImage;
-}
+const profileImages = ['images/profile1.jpg', 'images/profile2.jpg'];
+const randomImage = profileImages[Math.floor(Math.random() * profileImages.length)];
+profileImage.src = randomImage;
 
 // Ouvrir / fermer le menu mobile
 mobileToggle.addEventListener('click', () => {
@@ -42,9 +40,7 @@ themeToggle.addEventListener('click', () => {
 });
 
 // EmailJS initialization
-if (window.emailjs) {
-  emailjs.init('BmtigXxh0fUEjozTA');
-}
+emailjs.init('BmtigXxh0fUEjozTA');
 
 // Bouton retour en haut
 window.addEventListener('scroll', () => {
@@ -56,50 +52,42 @@ backToTop.addEventListener('click', () => {
 });
 
 // Validation du formulaire
-if (contactForm) {
-  contactForm.addEventListener('submit', event => {
-    event.preventDefault();
-    const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
-    const message = messageInput ? messageInput.value.trim() : '';
+contactForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
 
-    if (!name || !email || !message) {
-      showFeedback('Veuillez remplir tous les champs.', false);
-      return;
-    }
+  if (!name || !email || !message) {
+    showFeedback('Veuillez remplir tous les champs.', false);
+    return;
+  }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showFeedback('Veuillez saisir une adresse email valide.', false);
-      return;
-    }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showFeedback('Veuillez saisir une adresse email valide.', false);
+    return;
+  }
 
-    if (fromEmailHidden) fromEmailHidden.value = email;
-    if (userNameHidden) userNameHidden.value = name;
-    if (userEmailHidden) userEmailHidden.value = email;
-    if (userMessageHidden) userMessageHidden.value = message;
-    if (senderEmailHidden) senderEmailHidden.value = email;
+  if (fromEmailHidden) fromEmailHidden.value = email;
+  if (userNameHidden) userNameHidden.value = name;
+  if (userEmailHidden) userEmailHidden.value = email;
+  if (userMessageHidden) userMessageHidden.value = message;
+  if (senderEmailHidden) senderEmailHidden.value = email;
 
-    showFeedback('Envoi du message en cours...', true);
+  showFeedback('Envoi du message en cours...', true);
 
-    if (window.emailjs) {
-      emailjs.sendForm('service_1ixeqao', 'template_39v59sr', contactForm)
-        .then(() => {
-          contactForm.reset();
-          showFeedback('Message envoyé avec succès ! Je vous répondrai bientôt.', true);
-        })
-        .catch((error) => {
-          console.error('EmailJS error:', error);
-          showFeedback('Erreur lors de l’envoi. Vérifiez votre configuration EmailJS.', false);
-        });
-    } else {
+  emailjs.sendForm('service_1ixeqao', 'template_39v59sr', contactForm)
+    .then(() => {
       contactForm.reset();
-      showFeedback('Message envoyé localement, mais EmailJS n’est pas chargé.', false);
-    }
-  });
-}
+      showFeedback('Message envoyé avec succès ! Je vous répondrai bientôt.', true);
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
+      showFeedback('Erreur lors de l\'envoi. Vérifiez votre configuration EmailJS.', false);
+    });
+});
 
 function showFeedback(message, success) {
-  if (!formFeedback) return;
   formFeedback.textContent = message;
   formFeedback.style.color = success ? '#2563eb' : '#dc2626';
 }
@@ -118,22 +106,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(element => revealObserver.observe(element));
 
 // Fermeture du menu mobile lors du clic sur un lien
-if (navMenu) {
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-    });
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
   });
-}
-
-// Loader de page
-window.addEventListener('load', () => {
-  if (loader) {
-    loader.classList.add('hidden');
-    setTimeout(() => loader.style.display = 'none', 600);
-  }
-});
-
 });
 
 // Loader de page
@@ -141,4 +117,3 @@ window.addEventListener('load', () => {
   loader.classList.add('hidden');
   setTimeout(() => loader.style.display = 'none', 600);
 });
->>>>>>> 3296f4e601c99b3cb11cc2cd604923133b90e50b
